@@ -1,8 +1,21 @@
+<div align="center">
+
 # Grok Cursor Rules
+
+[![Grok 4.7](https://img.shields.io/badge/Grok-4.7-111111?style=flat-square)](#quick-start)
+[![Grok 4.8](https://img.shields.io/badge/Grok_4.8-planned-9ca3af?style=flat-square)](#roadmap)
+[![Cursor rules](https://img.shields.io/badge/Cursor-rules-000000?style=flat-square)](https://cursor.com/docs/rules)
+[![Status](https://img.shields.io/badge/status-untested-f59e0b?style=flat-square)](#status)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+
+[![Always on](https://img.shields.io/badge/Always--on-6_rules-0f172a?style=for-the-badge)](#the-rules)
+[![On demand](https://img.shields.io/badge/On_demand-2_rules-1e293b?style=for-the-badge)](#the-rules)
+
+</div>
 
 Cursor rules for Grok 4.7. They keep Grok's strong coding habits and add the parts it skips by default: compare design directions before building, review the rendered result from a screenshot, add one idea of its own, and ask you only about direction.
 
-These rules are written for Grok in Cursor. A version for Grok outside Cursor, such as a Grok bot, is planned.
+These rules are written for Grok in Cursor. A tuned version for Grok 4.8 and a version for Grok outside Cursor, such as a Grok bot, are planned.
 
 ## Why
 
@@ -87,6 +100,7 @@ The rules are not tested on real tasks yet. To test them, give Grok one prompt o
 ## Roadmap
 
 - Test the five prompts above and tune the rules from the results.
+- Tune the rules for Grok 4.8, and run the same five prompts on it.
 - Port the rules to Grok outside Cursor, such as a Grok bot.
 
 ## Sources
