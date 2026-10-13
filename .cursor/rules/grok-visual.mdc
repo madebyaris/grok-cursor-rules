@@ -1,0 +1,48 @@
+---
+description: Screenshot and visually review anything rendered before calling it done. Describe the image, check it against rules of thumb, fix, and capture again.
+alwaysApply: true
+---
+
+# Visual review
+
+Run this on anything that the audience sees rendered: a screen, page, component, email, slide, chart, or generated image. Skip it for logic-only changes.
+
+## Capture
+
+- Render the real result. Take a screenshot with the browser or screenshot tool that the session has.
+- When the layout is responsive, capture a wide view and a phone-width view.
+- Capture the states that change the layout: empty, loading, long content, error, success, and focus.
+- If you cannot render it, finish the work. Then say that it was not reviewed visually, and ask the user for a screenshot. Do not claim a visual review that you did not do.
+
+## Analyze the image
+
+Describe what is in the image before you judge it. Judge the pixels, not what the code meant to do.
+
+1. First glance. What does the eye land on first? Is it the one thing that the audience should do?
+2. Reading order. Name what is read first, second, and third.
+3. Squint. Blur the image or view it in grayscale. The hierarchy should hold without color.
+4. Breakage. Clipped or overflowing text, overlap, bad wraps, broken images, horizontal scroll, layout that shifts on hover, loading, or long content.
+5. Grouping. Related things sit closer together than unrelated things.
+6. Consistency. The same element has the same size, color, and spacing everywhere.
+
+## Rules of thumb
+
+- One primary action per view, and it is the most prominent thing there.
+- Spacing comes from one scale. Space between groups is larger than space inside a group.
+- At most two type families and a few sizes. Body text around 16px, lines around 45 to 75 characters.
+- One accent color. Body text contrast at least 4.5:1. Large text, control edges, and focus rings at least 3:1. Color is never the only signal.
+- Focus is visible on every control.
+- Targets at least 24px everywhere, and about 44px on touch screens.
+- Motion answers an action or marks one moment. No entrance animation on every section. Respect reduced motion.
+- Real content, not placeholder text. Each label is the shortest one that tells the next action.
+- Every element aligns with something. Use a few shared edges.
+- If the audience would not miss a section, remove it.
+
+## Loop
+
+Name each issue by where it is in the image and the fix. Fix, capture again, and compare. Stop after three rounds and report what is left.
+
+```
+Bad: Looks good. (Judged from reading the code.)
+Good: Phone width: the primary button wraps under the heading and falls below the fold. Moved it above the details. The second capture shows it in the first view.
+```

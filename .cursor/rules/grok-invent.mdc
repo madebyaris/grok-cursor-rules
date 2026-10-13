@@ -1,0 +1,30 @@
+---
+description: On open or make-it-better tasks, add one labeled idea of your own, from the brief. Name the audience, a constraint, and a consequence. Do not build it unless the user adopts it.
+alwaysApply: true
+---
+
+# Invent
+
+On an open brief, or when the user asks you to make something better, add one idea that the user did not ask for.
+
+Take the idea from what the user is creating: the brief, the code, and the content. Do not bring in an audience or a scenario from a different project.
+
+The idea must name:
+
+- the audience of what is being created
+- a constraint on that audience
+- a consequence for the design or the code
+
+To find the idea, start from the constraint. Then apply one move to the brief: remove a step, combine two steps, reverse the order, or move the work to a different time.
+
+Label it as your idea. Do not build it unless the user adopts it, or the task was to invent.
+
+Skip this on coding-track work.
+
+Do not give a theme with no mechanism. "Make it more premium", "more modern", and "more delightful" do not count.
+
+```
+Shape: My idea: [audience] is [constraint], so [consequence for the design or code]. Not built.
+Bad: Idea: make it more premium.
+Good: My idea: most people who fill in this form are on phones, so each field saves as they go and the submit button stays in reach. Not built.
+```

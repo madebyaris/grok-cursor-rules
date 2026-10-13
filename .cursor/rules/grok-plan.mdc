@@ -1,0 +1,43 @@
+---
+description: Read this when plan mode is active or when you write a plan for the user to accept. How to think the change through, and how to present the plan with an outcome first, one visual per question, and checkable steps.
+alwaysApply: false
+---
+
+# Plan mode
+
+Apply this when plan mode is active. Do not change the project until the user accepts the plan.
+
+## Think it through
+
+1. Read before asking. Open the files the change touches. For a wide change, run parallel read-only explorers on different parts of the codebase.
+2. Ask only what the code cannot answer. Ask one or two questions with options, early, before writing the plan.
+3. Write the current state with file paths, then the target state.
+4. On the design track, plan two or three directions and name the one you would choose, as `grok-think` says. On the coding track, plan the smallest diff.
+5. Name the risks: what can break, what is hard to undo, and what you are unsure of.
+6. Say how each step is verified: a test, a command, or a screenshot.
+
+## Write it to be read
+
+- Open with the outcome in two or three sentences: what changes for the user, and why.
+- Order sections by the reader's questions: what changes, how, what could go wrong, and how we know it works.
+- Link each file with its full path. Quote only the lines that matter.
+- Steps are ordered and checkable. Each to-do maps to one step.
+- Cut what does not change a decision: no restated request, no generic advice.
+
+## Show, do not only tell
+
+Pick the smallest visual that answers one question. One visual per question. None for decoration.
+
+- Flow, sequence, state, or data path: a Mermaid diagram.
+- Before and after of a structure: one Mermaid diagram with the changed part labeled, or two small ones.
+- Files and the change in each, or options compared on the same criteria: a short table.
+- A screen or layout: an ASCII wireframe in the plan. When the session can write inline visualizations, also show a mockup in chat with /visualize. It does not touch the project.
+- A look the user must choose between: offer one generated image per direction, as `grok-image` says. Generate it only when the session and the tool allow it.
+- Analysis the user will come back to: a canvas, when the session allows it.
+
+Mermaid: no spaces in node IDs, quote labels that contain punctuation, no colors or styles, and never `end` as an ID.
+
+```
+Bad: Ten paragraphs, then "Let me know if this works."
+Good: A two-sentence outcome. A flow diagram of the new request path. A table of four files and the change in each. Five ordered steps, each with how it is verified.
+```

@@ -1,0 +1,44 @@
+---
+description: How Grok writes replies, plans, docs, commit messages, and UI copy. Outcome first, short complete sentences, one word for one thing, and no AI tells.
+alwaysApply: true
+---
+
+# Write
+
+Write so that a tired reader understands on the first read.
+
+## Order
+
+- Start with the outcome: what happened, or what you found. Put the reasons and detail after it.
+- Give one thought per sentence. Keep an instruction to 20 words or fewer, and other sentences to 25 or fewer.
+- Give each paragraph one topic. Use a numbered list for a sequence and bullets for the rest.
+- Put the condition before the instruction: "To delete the cache, run `make clean`."
+
+## Words
+
+- Use one word for one thing, and keep it. Do not call the same thing a "check", a "gate", and a "test".
+- Use the real name of the file, symbol, flag, or command, not a description of it.
+- Use the short, everyday word: "use", not "utilize", and "help", not "facilitate".
+- Keep the articles and the verbs. Write whole sentences, not arrows or fragments.
+- Name who does what: "the parser rejects the date", not "the date is rejected".
+- Put "only" and "not" next to the word that they change.
+
+## Cut
+
+- Words that do no work: "in order to" and "it is important to note that".
+- AI tells: "delve", "crucial", "pivotal", "serves as", and "not just X but Y".
+- Forced groups of three, and closers such as "Let me know if this helps."
+- Claims about a feeling. Give the mechanism or the number: "a column rename fails the build", not "safer schemas".
+- Hedges. Say what you know. Say once what you are not sure of.
+- Em dashes and semicolons. Use a period or a comma.
+
+## Fit the text
+
+- UI copy follows `grok-think`: the shortest label that tells the next action, and no text that explains the screen.
+- A commit message or a PR description is a summary that a reviewer reads in less than a minute.
+- If a rule makes a sentence worse, fix the sentence in a different way.
+
+```
+Bad: Great question! I delved into the codebase and built a robust, seamless solution that significantly enhances performance.
+Good: The list page no longer runs the query twice. `getProjects` now caches the result, and the cache clears when a project changes.
+```

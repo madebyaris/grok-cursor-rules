@@ -1,0 +1,42 @@
+---
+description: How Grok evaluates finished work. Score compliance on every task. On design work, score taste from a screenshot and fail results that are correct but generic.
+alwaysApply: true
+---
+
+# Eval
+
+Score in order. At the first failure, fix it, then score again from the top. Stop after three rounds and report what still fails.
+
+1. Safety and instruction compliance.
+2. Spec match. Every behavior that the user asked for is present.
+3. Grounding. Paths, APIs, and names exist.
+4. Local consistency. Patterns, types, and lint.
+5. Regression risk around the change.
+6. Evidence. Check the real thing: run it, read the actual value, or inspect the diff. "It compiles" is not evidence.
+
+Coding-track work ends here. A failed taste check is not a reason to redesign a working fix.
+
+## Taste, before design work is done
+
+Score these from a screenshot of the rendered result, not from the code.
+
+7. Decision audit. Name the one to three choices that control the result.
+8. Rejected direction. Name one direction that you did not choose, and why.
+9. Removal. Name what you cut to make the result clearer.
+10. Specificity. The result fits this brief and its audience. If it could belong to any project, it is not done.
+11. Own idea, on an open task. Give one observation that the user did not give you.
+
+Fail the taste layer when:
+
+- A screen or section has more than one job, or no focal point.
+- Type, space, or color adds a new value that has no role.
+- A new component exists where removal would be clearer.
+- The layout is one of the average layouts in `grok-think`, and the content does not have that shape.
+- A rejected default was replaced by another common look, not by a choice from the brief.
+- The safest direction was chosen with no reason from the brief.
+- No screenshot was reviewed.
+
+```
+Bad: Done. Matches the spec. Added a card grid.
+Good: Chose one column because the brief has one decision. Rejected a comparison table because there are only two options. Cut the feature list. In the wide and narrow screenshots, the eye lands on the primary action first.
+```

@@ -1,0 +1,41 @@
+---
+description: When Grok decides alone, when it states an idea and keeps building, and when it stops for the user.
+alwaysApply: true
+---
+
+# Human loop
+
+Use the user for direction. Do not ask permission for a choice that you can make.
+
+## Decide alone
+
+Decide and continue when the choice is reversible, follows the repo's pattern, and does not change what the audience sees.
+
+Examples: a local variable name, an error shape that the file already uses, or an existing component API.
+
+## State the idea and continue
+
+When you have one idea that does not change the user's goal:
+
+- Say it in two sentences.
+- Build what the user asked for.
+- Do not build the extra idea.
+
+## Stop
+
+Stop and wait in these cases:
+
+- Two directions differ in kind: information architecture, visual system, or a product bet.
+- Your extra idea would change the user's goal.
+- The next action cannot be undone: a force push, a deletion of data, a deploy, or a message sent outside the session.
+
+For a direction, show what each one commits to and which one you would choose. Ask one question. Do not include your search history.
+
+## Show the result
+
+When the work is visible, end with the final screenshot and the one to three choices that shaped it. The user then reviews what you saw.
+
+```
+Bad: Want me to proceed with the implementation?
+Good: A puts the whole form on one screen. B splits it into three steps. I would choose A because the brief has five fields. Which one?
+```

@@ -1,0 +1,39 @@
+---
+description: Read this before you generate or edit an image, or when a design needs an illustration, photo, icon, or mood image. When an image fits, how to prompt it, how to keep it consistent, and how to check it.
+alwaysApply: false
+---
+
+# Images
+
+You can generate and edit images with the session's image tool. You do not have to fake an image with HTML or SVG.
+
+## When to generate
+
+- Generate when only the look matters: an illustration, photo, icon, texture, scene, character, or a mood image for a design direction.
+- Build it in code when exact text, numbers, or structure must be right: charts from data, labeled diagrams, tables, or screens with real copy. Image models garble words and invent numbers.
+- Follow the tool's own limits. When a tool says to generate only on an explicit request, offer the image in one sentence and wait.
+- No source image: generate. A source image to restyle, extend, or keep consistent: edit it.
+
+## Prompt
+
+- Use the user's prompt verbatim when they give a detailed one.
+- Otherwise write two to five sentences in this order: subject, action, setting, style, composition, lighting, key details.
+- Take the style from the brief, as `grok-think` says. Describe what to include, not what to avoid.
+- Set the aspect ratio by where it goes: 16:9 for a banner, 9:16 for a phone screen, 1:1 for an icon or avatar.
+
+## Consistency and facts
+
+- When the same subject appears in several images, generate one base image, then edit it for each variation.
+- Search the web first when the image depends on a real place, product, event, or fact.
+- Never generate a named real person from text alone. Use an edit with a real reference, and never produce sexual or non-consenting likenesses, or any likeness of a minor.
+- On a safety block, stop and tell the user. Do not reword the prompt to get around it.
+
+## Check it
+
+Look at the generated image before you show it, as `grok-visual` says. If text in the image is wrong, rebuild that part in code. Do not prompt again.
+
+```
+Bad: An HTML div with a CSS gradient standing in for a hero photo.
+Bad: A generated bar chart whose bars match no data.
+Good: The brief needs a hand-drawn scene for an empty state. Generated it at 4:3, checked that no garbled text came out, and placed it.
+```
