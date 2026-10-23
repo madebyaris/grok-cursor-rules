@@ -8,8 +8,8 @@
 [![Status](https://img.shields.io/badge/status-untested-f59e0b?style=flat-square)](#status)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-[![Always on](https://img.shields.io/badge/Always--on-6_rules-0f172a?style=for-the-badge)](#the-rules)
-[![On demand](https://img.shields.io/badge/On_demand-2_rules-1e293b?style=for-the-badge)](#the-rules)
+[![Always on](https://img.shields.io/badge/Always--on-5_rules-0f172a?style=for-the-badge)](#the-rules)
+[![On demand](https://img.shields.io/badge/On_demand-4_rules-1e293b?style=for-the-badge)](#the-rules)
 
 </div>
 
@@ -37,31 +37,27 @@ git clone https://github.com/madebyaris/grok-cursor-rules.git
 cp -r grok-cursor-rules/.cursor your-project/
 ```
 
-To use them in every project, copy the files into your user rules folder:
-
-```bash
-mkdir -p ~/.cursor/rules
-cp grok-cursor-rules/.cursor/rules/*.mdc ~/.cursor/rules/
-```
+To use them in every project, paste the always-on rules into Cursor Settings, Customize, Rules, User Rules. Cursor's docs describe User Rules as text set in Customize and do not document a `~/.cursor/rules` folder, so the per-project copy above is the reliable path.
 
 Then choose Grok 4.7 as the model in Cursor.
 
 ## The rules
 
-Six rules are always on. Two load only when the task needs them, to keep context small on plain coding turns.
+Five rules are always on. Four load only when the task needs them, to keep context small on plain coding turns.
 
 | Rule | Loads | What it does |
 |---|---|---|
+| [`grok-act`](.cursor/rules/grok-act.mdc) | Always | The work loop. Finds the repo's test, lint, and typecheck commands, keeps a to-do list, runs checks after each edit, fixes its own failures, and ends with next steps instead of a question. |
 | [`grok-think`](.cursor/rules/grok-think.mdc) | Always | Picks the coding or design track. On code, understand the flow, then reuse before you build. On design, write two or three directions and choose one. |
 | [`grok-eval`](.cursor/rules/grok-eval.mdc) | Always | Scores safety, spec, grounding, consistency, regression, and evidence. On design, also scores taste from a screenshot and fails generic results. |
 | [`grok-hitl`](.cursor/rules/grok-hitl.mdc) | Always | Decide alone, state an idea and continue, or stop. Stops for a direction fork, a change of goal, or an action that cannot be undone. |
-| [`grok-invent`](.cursor/rules/grok-invent.mdc) | Always | On open briefs, adds one labeled idea that names the audience, a constraint, and a consequence. Does not build it unless you adopt it. |
-| [`grok-visual`](.cursor/rules/grok-visual.mdc) | Always | Screenshots the rendered result at wide and phone widths, describes the image, checks it against rules of thumb, and fixes it in up to three rounds. |
+| [`grok-invent`](.cursor/rules/grok-invent.mdc) | Open briefs | On open briefs, adds one labeled idea that names the audience, a constraint, and a consequence. Does not build it unless you adopt it. |
+| [`grok-visual`](.cursor/rules/grok-visual.mdc) | Rendered work | Screenshots the rendered result at wide and phone widths, describes the image, checks it against rules of thumb, and fixes it in up to three rounds. |
 | [`grok-write`](.cursor/rules/grok-write.mdc) | Always | How Grok writes replies, plans, docs, and UI copy. Outcome first, short complete sentences, one word for one thing, and no AI tells. |
 | [`grok-plan`](.cursor/rules/grok-plan.mdc) | Plan mode | Reads before asking, plans risks and checks, and presents the plan with one visual per question: Mermaid, tables, wireframes, `/visualize` mockups, or a canvas. |
 | [`grok-image`](.cursor/rules/grok-image.mdc) | When images fit | Uses Grok's native image generation for looks, and code for exact text or data. Covers prompts, consistency, real people, and checks. |
 
-`grok-think` points to `grok-plan` and `grok-image`, so Grok still reads them when they are not loaded.
+`grok-think` points to `grok-plan`, `grok-image`, `grok-visual`, and `grok-invent`, so Grok still reads them when they are not loaded.
 
 ## How a task flows
 
@@ -95,6 +91,7 @@ The rules are not tested on real tasks yet. To test them, give Grok one prompt o
 | Build a landing page from an open brief | Two or three directions, one chosen with a reason, a screenshot review, and one labeled idea. |
 | Change a label to exact text | Built as asked, with nothing to choose. |
 | Plan a feature in plan mode | `grok-plan` loads. Outcome first, a diagram, a file table, and checkable steps. |
+| Fix a failing test and say nothing else | `grok-act` runs the test, fixes it, runs lint and typecheck, and reports the commands without asking to continue. |
 | Add a hero illustration | `grok-image` loads. A generated image, checked before it is shown. |
 
 ## Roadmap

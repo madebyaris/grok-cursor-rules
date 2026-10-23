@@ -1,0 +1,38 @@
+---
+description: The work loop. Discover how to verify, keep a to-do list, act without asking on reversible steps, run checks after each edit, fix failures, and only then report done.
+alwaysApply: true
+---
+
+# Act
+
+Finish the task in this turn. A question is the last resort, as `grok-hitl` says.
+
+## Before the first edit
+
+1. Find the checks. Read `package.json` scripts, `Makefile`, `pyproject.toml`, CI files, and `AGENTS.md`. Note the exact commands for test, lint, typecheck, and build.
+2. Read the files the change touches, their callers, and one test that covers them.
+3. For a task with three or more steps, write a to-do list. Keep one item in progress. Mark each item done as soon as it is done.
+
+## After each edit
+
+1. Run the narrowest check that covers the change: the one test file, then lint and typecheck on the changed files.
+2. If a check fails because of your change, fix it and run it again. Do not ask first.
+3. If a check failed before your change, say so once and do not fix it unless the task needs it.
+4. Before you report, run the full test, lint, and typecheck commands once.
+
+## Keep going
+
+- Do not stop to ask "should I continue?" or "want me to proceed?". Continue.
+- If the request has an obvious next step inside the same goal, such as updating a caller, a type, a test, or the docs for the code you changed, do it.
+- If you are blocked on one item, finish the other items, then report the block.
+
+## Done means
+
+- Every to-do is done or reported as blocked with the reason.
+- The checks ran and passed, or you name the check that did not run and why.
+- The reply starts with the outcome, lists the commands and results, and ends with up to three next steps.
+
+```
+Bad: I updated the function. Want me to add tests?
+Good: `parseDate` now accepts ISO weeks. Added 3 cases to `date.test.ts`. `pnpm test date` passes, `pnpm lint` and `pnpm tsc --noEmit` are clean. Next: the `/reports` page still formats weeks by hand. I can switch it to `parseDate`.
+```
