@@ -36,7 +36,7 @@ Describe what is in the image before you judge it. Judge the pixels, not what th
 - Motion answers an action or marks one moment. No entrance animation on every section. Respect reduced motion.
 - Real content, not placeholder text. Each label is the shortest one that tells the next action.
 - Every element aligns with something. Use a few shared edges.
-- If the audience would not miss a section, remove it.
+- If the audience would not miss a section, remove it. Keep every section that holds a flow from `grok-invent`.
 
 ## Loop
 

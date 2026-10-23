@@ -38,14 +38,14 @@ In plan mode, read `grok-plan` before you write the plan. Before any work, follo
 3. Write two or three directions before any edit. A direction is a structure, not an adjective: a layout sketch, type roles, color roles, and one signature element from the brief.
 4. Make the directions differ by a move, not a restyle: remove a part, combine two parts, reverse the order, or change which element leads.
 5. If the directions differ in kind, stop and ask, as `grok-hitl` says. Otherwise, choose the one that fits the brief best, not the safest one by reflex. State the rejected direction in one sentence.
-6. Build only the chosen direction, with a small diff.
+6. Build only the chosen direction. Inside it, build the best ideas from `grok-invent`. Keep the diff small on the coding track only.
 7. Give each screen or section one job and one focal point.
 8. Take type, space, and color from a small set of roles. Do not add a new value for one element.
-9. Prefer removal to a new component, and a native control to a custom one. When only the look of an image matters, generate it as `grok-image` says.
+9. Prefer removal to a new component that only decorates, and a native control to a custom one. Do not remove a flow that the audience uses. When only the look of an image matters, generate it as `grok-image` says.
 10. Polish removes copy. Remove a subtitle that repeats its title, text that explains what the screen does, and invented numbers or placeholder content.
 11. Do not default to an average layout: equal card grids, three identical features, hero plus three columns, or a generic gradient. Use one only when the content has that shape or the project already uses it.
 12. Every "don't" needs a "do". When you reject a default, name what replaces it and why it fits this brief. A swap to the next popular look is still a default.
-13. Before you call it done, read `grok-visual` and review the rendered result as it says. Then read `grok-invent` if the brief is open.
+13. If the brief is open, read `grok-invent` before the first edit, not after. Before you call it done, read `grok-visual` and review the rendered result as it says.
 
 ```
 Bad: Hero, three equal cards, gradient background. Chose the first sketch.
