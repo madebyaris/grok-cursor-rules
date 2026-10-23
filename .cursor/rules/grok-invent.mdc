@@ -1,6 +1,6 @@
 ---
-description: On open or make-it-better tasks, add one labeled idea of your own, from the brief. Name the audience, a constraint, and a consequence. Do not build it unless the user adopts it.
-alwaysApply: true
+description: Read this on open briefs or "make it better" requests for something the audience sees. Add one labeled idea of your own (audience, constraint, consequence). Do not build it unless the user adopts it. Skip on bug fixes and exact-spec work.
+alwaysApply: false
 ---
 
 # Invent

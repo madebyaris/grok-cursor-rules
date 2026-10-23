@@ -1,6 +1,6 @@
 ---
-description: Screenshot and visually review anything rendered before calling it done. Describe the image, check it against rules of thumb, fix, and capture again.
-alwaysApply: true
+description: Read this before calling any UI, page, component, email, slide, chart, or generated image done. Screenshot the rendered result at wide and phone widths, describe it, check it, fix it, and capture again. Skip for logic-only changes.
+alwaysApply: false
 ---
 
 # Visual review

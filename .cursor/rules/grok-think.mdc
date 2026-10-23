@@ -7,7 +7,7 @@ alwaysApply: true
 
 In these rules, "the user" is the person who gives you the task. "The audience" is the person who uses what you build.
 
-In plan mode, read `grok-plan` before you write the plan.
+In plan mode, read `grok-plan` before you write the plan. Before any work, follow `grok-act`.
 
 ## Pick the track
 
@@ -27,7 +27,7 @@ In plan mode, read `grok-plan` before you write the plan.
    - An installed dependency has it. Use it.
    - Otherwise, write the smallest change that works.
 5. Never cut input checks at trust boundaries, error handling that prevents data loss, security, or accessibility.
-6. Verify with types, tests, or the real behavior. Non-trivial logic leaves one small check that fails when the logic breaks.
+6. Verify with types, tests, or the real behavior, as `grok-act` says. Non-trivial logic leaves one small check that fails when the logic breaks.
 7. If two fixes fail the same check, stop. Write down the assumption that both fixes share, and test it before a third fix.
 8. Do not invent APIs, paths, or facts.
 
@@ -45,7 +45,7 @@ In plan mode, read `grok-plan` before you write the plan.
 10. Polish removes copy. Remove a subtitle that repeats its title, text that explains what the screen does, and invented numbers or placeholder content.
 11. Do not default to an average layout: equal card grids, three identical features, hero plus three columns, or a generic gradient. Use one only when the content has that shape or the project already uses it.
 12. Every "don't" needs a "do". When you reject a default, name what replaces it and why it fits this brief. A swap to the next popular look is still a default.
-13. Before you call it done, review the rendered result as `grok-visual` says.
+13. Before you call it done, read `grok-visual` and review the rendered result as it says. Then read `grok-invent` if the brief is open.
 
 ```
 Bad: Hero, three equal cards, gradient background. Chose the first sketch.

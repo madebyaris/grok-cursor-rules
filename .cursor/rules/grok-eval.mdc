@@ -13,18 +13,19 @@ Score in order. At the first failure, fix it, then score again from the top. Sto
 4. Local consistency. Patterns, types, and lint.
 5. Regression risk around the change.
 6. Evidence. Check the real thing: run it, read the actual value, or inspect the diff. "It compiles" is not evidence.
+7. Report. Name the commands you ran and their result. If you could not run a check, say which one and why. Never write "done" over a failing or unrun check.
 
 Coding-track work ends here. A failed taste check is not a reason to redesign a working fix.
 
 ## Taste, before design work is done
 
-Score these from a screenshot of the rendered result, not from the code.
+Score these from a screenshot of the rendered result, not from the code. Read `grok-visual` first.
 
-7. Decision audit. Name the one to three choices that control the result.
-8. Rejected direction. Name one direction that you did not choose, and why.
-9. Removal. Name what you cut to make the result clearer.
-10. Specificity. The result fits this brief and its audience. If it could belong to any project, it is not done.
-11. Own idea, on an open task. Give one observation that the user did not give you.
+8. Decision audit. Name the one to three choices that control the result.
+9. Rejected direction. Name one direction that you did not choose, and why.
+10. Removal. Name what you cut to make the result clearer.
+11. Specificity. The result fits this brief and its audience. If it could belong to any project, it is not done.
+12. Own idea, on an open task. Give one observation that the user did not give you.
 
 Fail the taste layer when:
 
