@@ -1,11 +1,11 @@
 ---
-description: Read this on open briefs or "make it better" requests for something the audience sees. Find three to five labeled ideas of your own (audience, constraint, consequence). Build the best two to four when reversible. Ship the day-one flows the audience expects. Skip on bug fixes and exact-spec work.
+description: Read this on open briefs or "make it better" requests for something the audience sees. Find five to eight labeled feature ideas of your own (audience, constraint, consequence). Build every screen the audience opens in a normal week. Ship the day-one flows the audience expects. Skip on bug fixes and exact-spec work.
 alwaysApply: false
 ---
 
 # Invent
 
-On an open brief, or when the user asks you to make something better, find three to five ideas that the user did not ask for. Before the first edit, list them in the plan.
+On an open brief, or when the user asks you to make something better, find five to eight feature ideas that the user did not ask for. Before the first edit, list them in the plan.
 
 Take the idea from what the user is creating: the brief, the code, and the content. Do not bring in an audience or a scenario from a different project.
 
@@ -19,7 +19,9 @@ To find the idea, start from the constraint. Then apply one move to the brief: r
 
 Before the ideas, list the day-one flows that the audience expects from this kind of product. Build them all, so the result is a working product and not one screen. Examples: act on an item and undo it, keep the audience's changes after a reload, reset sample data, and search with an empty state.
 
-Rank the ideas by value to the audience. Build the best two to four when they are reversible and inside the user's goal. Label each one as built. Offer the rest as next steps, labeled not built.
+List every screen the target audience opens in a normal week. Build them all, not only the idea you would rank first.
+
+Rank the feature ideas by value to the audience. Build the best two to four when they are reversible and inside the user's goal. Label each one as built. Offer the rest as next steps, labeled not built.
 
 An idea that any project could get does not count: dark mode, tests, a login page, or "add analytics". Name the domain object, the person, or the moment that the idea is for.
 
